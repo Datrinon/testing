@@ -19,4 +19,15 @@ module.exports = {
   rules: {
     "linebreak-style": ["error", "windows"],
   },
+  overrides: [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 };
