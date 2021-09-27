@@ -4,7 +4,7 @@
   "description": "Practicing lecture on Jest.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --maxWorkers=50%",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
