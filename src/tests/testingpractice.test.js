@@ -63,6 +63,16 @@ it("Caesar Cipher: Phrases with punctuation #1", () => {
 });
 
 it("Caesar Cipher: Phrases with numbers.", () => {
-  expect(caesarcipher("Prisoner #109-321409239-1293, step forward!!", 13))
+  expect(caesarcipher("prisoner #109-321409239-1293, step forward!!", 13))
       .toBe("cevfbare #109-321409239-1293, fgrc sbejneq!!")
+});
+
+it("Caesar Cipher: Cases are maintained.", () => {
+  expect(caesarcipher("You make my Earth quake / Ohh, you make my Earth quake.", 13))
+      .toBe("Lbh znxr zl Rnegu dhnxr / Buu, lbh znxr zl Rnegu dhnxr.")
+});
+
+it("Caesar Cipher: Offset of 0.", () => {
+  expect(caesarcipher("You make my Earth quake / Ohh, you make my Earth quake.", 0))
+      .toBe("You make my Earth quake / Ohh, you make my Earth quake.")
 });
